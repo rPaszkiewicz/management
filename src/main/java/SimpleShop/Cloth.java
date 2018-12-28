@@ -1,15 +1,16 @@
 package SimpleShop;
 
-public class Cloth extends Product{
+public class Cloth extends Product {
     private String size;
     private String material;
 
-    public Cloth(Long id,String productName, double price,double weight,String color,int productCount, String size,String material){
+    public Cloth(Long id, String productName, double price, double weight, String color, int productCount, String size, String material) {
         super(id, productName, price, weight, color, productCount);
-        this.size=size;
-        this.material=material;
+        this.size = size;
+        this.material = material;
     }
-    public static class Builder{
+
+    public static class Builder {
         private Long id;
         private String productName;
         private double price;
@@ -19,52 +20,52 @@ public class Cloth extends Product{
         private String size;
         private String material;
 
-        public Builder(){
+        public Builder() {
 
         }
 
-        public Builder setId(Long id){
-            this.id=id;
+        public Builder setId(Long id) {
+            this.id = id;
             return this;
         }
 
-        public Builder setProductName(String productName){
-            this.productName=productName;
+        public Builder setProductName(String productName) {
+            this.productName = productName;
             return this;
         }
 
-        public Builder setPrice(double price){
-            this.price=price;
+        public Builder setPrice(double price) {
+            this.price = price;
             return this;
         }
 
-        public Builder setWeight(double weight){
-            this.weight=weight;
+        public Builder setWeight(double weight) {
+            this.weight = weight;
             return this;
         }
 
-        public Builder setColor(String color){
-            this.color=color;
+        public Builder setColor(String color) {
+            this.color = color;
             return this;
         }
 
-        public Builder setProductCount(int productCount){
-            this.productCount=productCount;
+        public Builder setProductCount(int productCount) {
+            this.productCount = productCount;
             return this;
         }
 
-        public Builder setSize(String size){
-            this.size=size;
+        public Builder setSize(String size) {
+            this.size = size;
             return this;
         }
 
-        public Builder setMaterial(String material){
-            this.material=material;
+        public Builder setMaterial(String material) {
+            this.material = material;
             return this;
         }
 
-        public Cloth build(){
-            return new Cloth(id,productName,price,weight,color,productCount,size,material);
+        public Cloth build() {
+            return new Cloth(id, productName, price, weight, color, productCount, size, material);
         }
 
     }
@@ -77,7 +78,7 @@ public class Cloth extends Product{
         return material;
     }
 
-    public String toString(){
-        return "Cloth size: " + size +"\n"+ "Cloth material: 100% " + material;
+    public String toString() {
+        return "Cloth size: " + size + "\n" + "Cloth material: 100% " + material;
     }
 }

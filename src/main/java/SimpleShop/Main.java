@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
         Scanner in = new Scanner(System.in);
 
         Product product = new Product.Builder()
@@ -21,8 +21,8 @@ public class Main {
         Cloth tShirt = new Cloth.Builder()
                 .setSize("L")
                 .setMaterial("Cotton")
+                .setProductCount(10)
                 .build();
-
         System.out.println(tShirt);
 
         User user = new User(1234567,"Tobiasz","babajagaPatrzy123");
